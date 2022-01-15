@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hey Mara</title>
+</head>
+<body>
+    <header>
+        <h3><a href="{% url 'search' %}">Search Courses</a> </h3>
+        <h3><a href="{% url 'list_courses' %}">All Courses</a> </h3>
+        <h3><a href="{% url 'list_profs' %}">All Teachers</a> </h3>
+    </header>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

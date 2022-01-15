@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'search_results_courses' %}" method="GET">
+        {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <input type="Submit" name="submit" value="Submit"/>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in prof_list %}
+
+        {% if item.prof %}
+            <a href="{% url 'prof_detail' item.prof %}">{{ item.prof }}</a>
+        {% else %}
+            <p>{{ item.prof }}</p>
+            <p>{{ item.pk }}</p>
+        {% endif %}
+
+        <p>Description : {{ item.description }} </p>
+
+    {% endfor %}
+
+
+{% endblock content %}
